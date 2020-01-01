@@ -7,7 +7,7 @@ plot(t,x)
 %Delimitam graficul pe axa Ox de la 0 la 8 si pe Oy de la -2 la 2
 axis([0 8 -2 2])
 %Am denumit axa Ox
-xlabel('Timpul(secunde)')
+xlabel('Timpul(milisecunde)')
 %Am denumit axa Oy
 ylabel('Amplitudinea semnalului(um)')
 title('Semnal dreptunghiular cu factor de umplere 25%')
