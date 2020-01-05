@@ -5,7 +5,7 @@ w=2*pi*f;
 t = 0:0.0001:12*T;
 N=50;
 C = zeros(1,2*N+1);
-x=(sawtooth(w*t,0.5)+abs(sawtooth(w*t,0.5)))/2
+x=(sawtooth(w*t,0.5)+abs(sawtooth(w*t,0.5)))/2;
 %semnal triunghiular simetric monoredresat de perioada pricipala T=48s 
 for n = -N:N
     C(n+N+1) = 1/T * integral(@(t)(1/2*sawtooth(w*t,0.5)+1/2*abs(sawtooth(w*t,0.5))).*exp(-1j*n*w*t),0,T) ;
@@ -37,9 +37,9 @@ hold on
 plot(t,real(xr),':r',t,imag(xr),':r');%reprezentarea semnalului reconstruit
 plot(t,x);%reprezentarea semnalului initial
 axis([-1 90 -0.5 1.2])%delimitarea axelor de coordonate
-xlabel("Timpul[s]");
-ylabel("X(t)-linie continua si Xr(t)-linie punctata");
-title("Suprapunerea semnalelor X(t) si Xr(t)")
+xlabel('Timpul[s]');
+ylabel('X(t)-linie continua si Xr(t)-linie punctata');
+title('Suprapunerea semnalelor X(t) si Xr(t)')
 %semnalul triunghiular se poate aproxima cu mai putine componente
 % si astfel diferenta dintre x si xr este aproape inexistenta
 hold off
